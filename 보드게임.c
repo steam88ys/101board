@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 void main(void) 
 {
 	// 플레이어의 위치(0부터 시작)
@@ -24,8 +25,15 @@ void main(void)
 	int dice;
 
 	srand(time(0));
+
+	printf("현재위치 : %d\n\n", position);
+
 	// 주사위는 1 ~ 6까지 나오게 설정
 	dice = rand() % 6 + 1;
+	printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 
-	printf("%d\n", dice);
+	// 던진 주사위값을 현재 위치에 적용
+	position += dice;
+	printf("현재위치 : %d\n\n", position);
+
 }
