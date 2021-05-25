@@ -39,11 +39,18 @@ void main(void)
 		/* 던짐 */
 		// 주사위는 1 ~ 6까지 나오게 설정
 		dice = rand() % 6 + 1;
-		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
+		printf("주사위를 던져서 %d이 나왔습니다.\n", dice);
 
 		// 던진 주사위값을 현재 위치에 적용
 		position += dice;
 		printf("현재위치 : %d, 현재금액 : % lld\n\n", position, money);
+
+		if (position == 20)
+		{
+			printf("기부천사 - *위치 20*에 있을 때 재산의 20%%를 사회에 기부합니다. \n");
+			money = (long long)(money * 0.8);
+			printf("현재위치 : %d, 현재금액 : % lld\n\n", position, money);
+		}
 
 		if (position > 60)
 		{
