@@ -52,6 +52,13 @@ void main(void)
 			printf("현재위치 : %d, 현재금액 : % lld\n\n", position, money);
 		}
 
+		if (position == 59) 
+		{
+			printf("위치 59에 있을때, 처음 지점으로 돌아갑니다.\n");
+			position = 0;
+			printf("현재위치 : %d, 현재금액 : % lld\n\n", position, money);
+		}
+
 		if (position > 60)
 		{
 			printf("축하합니다. 목적지에 도착하셨습니다.\n");
