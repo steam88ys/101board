@@ -23,7 +23,7 @@ void main(void)
 	int position = 0;
 	// 주사위
 	int dice;
-	// 돈은 2천부터 시작
+	// 돈은 2천만부터 시작
 	int money = 20000000;
 
 	srand(time(0));
@@ -74,6 +74,12 @@ void main(void)
 		case 59:
 			printf("*위치 59*에 있을때, 처음 지점으로 돌아갑니다.\n");
 			position = 0;
+			printf("현재위치 : %d, 현재금액 : % d\n\n", position, money);
+			break;
+
+		case 60:
+			printf("끝 점에 있을 때, 금액이 2배가 됩니다.\n");
+			money *= 2;
 			printf("현재위치 : %d, 현재금액 : % d\n\n", position, money);
 			break;
 		}
