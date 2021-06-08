@@ -78,8 +78,17 @@ void main(void)
 			printf("*위치49*에 있을때, 3턴동안 움직일 수 없습니다.\n");
 			for (int i = 0; i <= 3; i++)
 			{
-				gatchar();
+				getchar();
 				printf("%d 턴입니다.\n", i);
+				dice = rand() % 6 + 1;
+				printf("주사위가 %d(이)가 나왔습니다.\n ", dice);
+
+				// 주사위를 던져서 3이나오면 무인도를 탈출
+				if(dice ==3)
+				{
+					pinrtf("축하합니다. %d이 나왔습니다.");
+					break;
+				}
 			}
 			printf("무인도에 탈출하였습니다.\n");
 			printf("현재위치 : %d, 현재금액 : % d\n\n", position, money);
