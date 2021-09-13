@@ -6,6 +6,6 @@ void main(void)
 	int* ptr = &num;
 
 	printf("num안에 들어있는 값 %d\n", num);
-	printf("num의 메모리 주소값 %d\n", &num);
-	printf("ptr안에 들어있는 값 %d\n", ptr);		// %p로하면 16진수로 나옴
+	printf("num의 메모리 주소값 %p\n", &num);
+	printf("ptr안에 들어있는 값 %p\n", ptr);		// %p로하면 16진수로 나옴
 }
