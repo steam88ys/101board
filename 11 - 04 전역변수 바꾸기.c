@@ -11,7 +11,7 @@ void main(void)
 	printf("바꾸기 후 %d \n", A);
 }
 
-void changeA(void)
+void changeA()
 {
 	A = 5;
 }
