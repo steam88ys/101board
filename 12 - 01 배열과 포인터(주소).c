@@ -3,13 +3,12 @@
 void main(void)
 {
 	int arr[4] = {10, 20, 30, 40};
-	char str[4] = "ACE";	// 문자를 넣으려면 맨 끝에 null문자 한 공간이 필요해서 4개임
+	int* ptr = arr;
 
-	printf("arr의 0번째 값 %d %d \n", arr[0], *arr);
-	printf("arr의 1번째 값 %d %d \n", arr[1], *(arr+1));
-	printf("주의하기 *arr+1 %d \n\n", *arr+1);
-	
-	printf("str의 0번째 값 %c %c\n", str[0], *str);
-	printf("str의 1번째 값 %c %c\n", str[1], *(str+1));
-	printf("주의하기 *str+1 %c\n", *str+1);
+	printf("%d %d %d %d \n", arr[0], arr[1], arr[2], arr[3]);
+	printf("%d %d %d %d \n", ptr[0], ptr[1], ptr[2], ptr[3]);
+	printf("%d %d %d %d \n", *ptr, *(ptr+1), *(ptr + 2), *(ptr + 3));
+
+	printf("배열의 크기 %d\n", sizeof(arr));
+	printf("포인터의 크기 %d\n", sizeof(arr));
 }
