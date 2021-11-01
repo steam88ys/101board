@@ -2,15 +2,14 @@
 
 void main(void)
 {
-	int arr[4];
-	// 공간 하나당 4바이트씩 차이
-	printf("arr 0번째 공간의 주소 : %p\n", &arr[0]);
-	printf("arr 배열의 시작 주소 : %p\n", arr);			 // 배열의 이름은 시작 주소값을 나타냄
-	printf("arr 1번째 공간의 주소 : %p\n\n", &arr[1]);
+	int arr[4] = {10, 20, 30, 40};
+	char str[4] = "ACE";	// 문자를 넣으려면 맨 끝에 null문자 한 공간이 필요해서 4개임
+
+	printf("arr의 0번째 값 %d %d \n", arr[0], *arr);
+	printf("arr의 1번째 값 %d %d \n", arr[1], *(arr+1));
+	printf("주의하기 *arr+1 %d \n\n", *arr+1);
 	
-	char str[4];
-	// 공간 하나당 1바이트씩 차이
-	printf("str 0번째 공간의 주소 : %p\n", &str[0]);
-	printf("str 배열의 시작 주소 : %p\n", str);
-	printf("str 1번째 공간의 주소 : %p\n", &str[1]);
+	printf("str의 0번째 값 %c %c\n", str[0], *str);
+	printf("str의 1번째 값 %c %c\n", str[1], *(str+1));
+	printf("주의하기 *str+1 %c\n", *str+1);
 }
