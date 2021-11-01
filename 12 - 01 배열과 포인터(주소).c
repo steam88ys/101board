@@ -10,5 +10,5 @@ void main(void)
 	printf("%d %d %d %d \n", *ptr, *(ptr+1), *(ptr + 2), *(ptr + 3));
 
 	printf("배열의 크기 %d\n", sizeof(arr));
-	printf("포인터의 크기 %d\n", sizeof(arr));
+	printf("포인터의 크기 %d\n", sizeof(ptr));
 }
