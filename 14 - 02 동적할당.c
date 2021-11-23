@@ -16,4 +16,6 @@ void main(void)
 	// 실행시간에 메모리가 결정되는 동적할당(heap 영역)
 	int* ptr = (int* )malloc(length * sizeof(int));
 
+	ptr[0] = 10, ptr[1] = 20, ptr[2] = 30, ptr[3] = 40;
+
 }
