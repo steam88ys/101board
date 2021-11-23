@@ -18,4 +18,7 @@ void main(void)
 
 	ptr[0] = 10, ptr[1] = 20, ptr[2] = 30, ptr[3] = 40;
 
+	// 동적할당된 공간을 해제
+	free(ptr);
+
 }
