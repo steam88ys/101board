@@ -8,8 +8,10 @@ typedef struct point {
 
 void main(void)
 {
-	Point a = { 3, 4 };
-	Point* ptr = &a;
+	// 구조체 동적 할당
+	Point* ptr = (Point*)malloc(sizeof(Point));
+	ptr->x = 3;
+	ptr->y = 4;
 
 	// 구조체에서 직접접근
 	printf("%d %d \n", a.x, a.y);
